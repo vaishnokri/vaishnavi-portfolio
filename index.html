@@ -16,22 +16,47 @@
 </head>
 <body>
 
-<div class="grain"></div>
+<a href="#main-content" class="skip-link">Skip to main content</a>
+<div class="grain" aria-hidden="true"></div>
 
 <header class="topbar">
   <div class="wrap topbar__inner">
-    <a href="#cover" class="topbar__mark">VK<span class="topbar__mark-dot">·</span></a>
-    <nav class="topbar__nav" aria-label="Primary">
-      <a href="#about">Profile</a>
-      <a href="#skills">Visas</a>
-      <a href="#projects">Entries</a>
-      <a href="#achievements">Stamps</a>
-      <a href="#contact">Exit</a>
-    </nav>
+    <a href="#cover" class="topbar__mark" aria-label="Vaishnavi Kumari, back to top">VK<span class="topbar__mark-dot">·</span></a>
+    <div class="topbar__controls">
+      <nav class="topbar__nav" aria-label="Primary">
+        <a href="#about">Profile</a>
+        <a href="#skills">Visas</a>
+        <a href="#projects">Entries</a>
+        <a href="#achievements">Stamps</a>
+        <a href="#contact">Exit</a>
+      </nav>
+      <button
+        id="theme-toggle"
+        class="theme-toggle"
+        type="button"
+        aria-label="Switch to dark theme"
+        title="Switch to dark theme"
+      >
+        <svg class="theme-toggle__icon theme-toggle__icon--moon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+        <svg class="theme-toggle__icon theme-toggle__icon--sun" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="5"></circle>
+          <line x1="12" y1="1" x2="12" y2="3"></line>
+          <line x1="12" y1="21" x2="12" y2="23"></line>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+          <line x1="1" y1="12" x2="3" y2="12"></line>
+          <line x1="21" y1="12" x2="23" y2="12"></line>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        </svg>
+      </button>
+    </div>
   </div>
 </header>
 
-<main>
+<main id="main-content" tabindex="-1">
 
   <!-- COVER PAGE -->
   <section id="cover" class="page cover">
@@ -47,7 +72,7 @@
       </div>
       <div class="cover__stamp" aria-hidden="true">
         <div class="stamp stamp--navy stamp--large">
-          <svg viewBox="0 0 120 120" class="stamp__ring">
+          <svg viewBox="0 0 120 120" class="stamp__ring" aria-hidden="true" focusable="false">
             <path id="stampCirclePath" d="M 60,60 m -46,0 a 46,46 0 1,1 92,0 a 46,46 0 1,1 -92,0" fill="none"/>
             <text><textPath href="#stampCirclePath" startOffset="0%">ISSUED · SEPTEMBER 2026 · OPEN TO WORK · </textPath></text>
           </svg>
@@ -180,48 +205,48 @@
       <p class="page__lede">Milestones, stamped in as they happen.</p>
 
       <div class="stampboard">
-        <div class="stamp stamp--navy" style="--r:-6deg">
-          <svg viewBox="0 0 120 120" class="stamp__ring">
+        <div class="stamp stamp--navy" style="--r:-6deg" role="img" aria-label="First GitHub repository, 2026">
+          <svg viewBox="0 0 120 120" class="stamp__ring" aria-hidden="true" focusable="false">
             <path id="p1" d="M 60,60 m -46,0 a 46,46 0 1,1 92,0 a 46,46 0 1,1 -92,0" fill="none"/>
             <text><textPath href="#p1" startOffset="0%">FIRST REPOSITORY · GITHUB · </textPath></text>
           </svg>
           <span class="stamp__center stamp__center--sm">2026</span>
         </div>
 
-        <div class="stamp stamp--gold" style="--r:4deg">
-          <svg viewBox="0 0 120 120" class="stamp__ring">
+        <div class="stamp stamp--gold" style="--r:4deg" role="img" aria-label="First open-source pull request merged">
+          <svg viewBox="0 0 120 120" class="stamp__ring" aria-hidden="true" focusable="false">
             <path id="p2" d="M 60,60 m -46,0 a 46,46 0 1,1 92,0 a 46,46 0 1,1 -92,0" fill="none"/>
             <text><textPath href="#p2" startOffset="0%">OPEN SOURCE · FIRST PR MERGED · </textPath></text>
           </svg>
           <span class="stamp__center stamp__center--sm">PR</span>
         </div>
 
-        <div class="stamp stamp--green" style="--r:-3deg">
-          <svg viewBox="0 0 120 120" class="stamp__ring">
+        <div class="stamp stamp--green" style="--r:-3deg" role="img" aria-label="100 days of code streak">
+          <svg viewBox="0 0 120 120" class="stamp__ring" aria-hidden="true" focusable="false">
             <path id="p3" d="M 60,60 m -46,0 a 46,46 0 1,1 92,0 a 46,46 0 1,1 -92,0" fill="none"/>
             <text><textPath href="#p3" startOffset="0%">100 DAYS OF CODE · STREAK · </textPath></text>
           </svg>
           <span class="stamp__center stamp__center--sm">100</span>
         </div>
 
-        <div class="stamp stamp--navy" style="--r:5deg">
-          <svg viewBox="0 0 120 120" class="stamp__ring">
+        <div class="stamp stamp--navy" style="--r:5deg" role="img" aria-label="Responsive design certified">
+          <svg viewBox="0 0 120 120" class="stamp__ring" aria-hidden="true" focusable="false">
             <path id="p4" d="M 60,60 m -46,0 a 46,46 0 1,1 92,0 a 46,46 0 1,1 -92,0" fill="none"/>
             <text><textPath href="#p4" startOffset="0%">RESPONSIVE DESIGN · CERTIFIED · </textPath></text>
           </svg>
           <span class="stamp__center stamp__center--sm">✓</span>
         </div>
 
-        <div class="stamp stamp--gold" style="--r:-5deg">
-          <svg viewBox="0 0 120 120" class="stamp__ring">
+        <div class="stamp stamp--gold" style="--r:-5deg" role="img" aria-label="Hackathon participant">
+          <svg viewBox="0 0 120 120" class="stamp__ring" aria-hidden="true" focusable="false">
             <path id="p5" d="M 60,60 m -46,0 a 46,46 0 1,1 92,0 a 46,46 0 1,1 -92,0" fill="none"/>
             <text><textPath href="#p5" startOffset="0%">HACKATHON · PARTICIPANT · </textPath></text>
           </svg>
           <span class="stamp__center stamp__center--sm">HK</span>
         </div>
 
-        <div class="stamp stamp--green" style="--r:3deg">
-          <svg viewBox="0 0 120 120" class="stamp__ring">
+        <div class="stamp stamp--green" style="--r:3deg" role="img" aria-label="JavaScript fundamentals">
+          <svg viewBox="0 0 120 120" class="stamp__ring" aria-hidden="true" focusable="false">
             <path id="p6" d="M 60,60 m -46,0 a 46,46 0 1,1 92,0 a 46,46 0 1,1 -92,0" fill="none"/>
             <text><textPath href="#p6" startOffset="0%">JAVASCRIPT · FUNDAMENTALS · </textPath></text>
           </svg>
@@ -240,12 +265,12 @@
         <p class="cover__role">Open to frontend roles, freelance work, and collaborations.</p>
         <div class="cover__actions">
           <a href="mailto:vaishnavi.kumari@example.com" class="btn btn--primary">vaishnavi.kumari@example.com</a>
-          <a href="https://github.com/vaishnokri" class="btn btn--ghost" target="_blank" rel="noopener">GitHub ↗</a>
+          <a href="https://github.com/vaishnokri" class="btn btn--ghost" target="_blank" rel="noopener" aria-label="Vaishnavi Kumari on GitHub (opens in a new tab)">GitHub ↗</a>
         </div>
       </div>
       <div class="cover__stamp" aria-hidden="true">
         <div class="stamp stamp--green stamp--large">
-          <svg viewBox="0 0 120 120" class="stamp__ring">
+          <svg viewBox="0 0 120 120" class="stamp__ring" aria-hidden="true" focusable="false">
             <path id="stampCirclePath2" d="M 60,60 m -46,0 a 46,46 0 1,1 92,0 a 46,46 0 1,1 -92,0" fill="none"/>
             <text><textPath href="#stampCirclePath2" startOffset="0%">CLEARED FOR CONTACT · REPLY WITHIN 48H · </textPath></text>
           </svg>
