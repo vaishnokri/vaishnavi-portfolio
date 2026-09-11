@@ -1,5 +1,31 @@
 /* ============================================
    Vaishnavi Kumari — Developer Passport
+   Self-hosted variable fonts (no external requests)
+============================================ */
+@font-face {
+  font-family: "Space Grotesk";
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url("assets/fonts/space-grotesk-variable.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400 600;
+  font-display: swap;
+  src: url("assets/fonts/inter-variable.woff2") format("woff2");
+}
+@font-face {
+  font-family: "JetBrains Mono";
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url("assets/fonts/jetbrains-mono-variable.woff2") format("woff2");
+}
+
+/* ============================================
+   Vaishnavi Kumari — Developer Passport
    Tokens
 ============================================ */
 :root {
@@ -15,9 +41,9 @@
   --line: rgba(20, 23, 31, 0.14);
   --line-strong: rgba(20, 23, 31, 0.28);
 
-  --font-display: system-ui, -apple-system, "Segoe UI", sans-serif;
-  --font-body: system-ui, -apple-system, "Segoe UI", sans-serif;
-  --font-mono: ui-monospace, "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  --font-display: "Space Grotesk", system-ui, sans-serif;
+  --font-body: "Inter", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
 
   --wrap: 1080px;
   --radius: 4px;
