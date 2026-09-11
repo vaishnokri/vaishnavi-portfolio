@@ -849,4 +849,48 @@ button:focus-visible {
   }
 }
 
+/* ============================================
+   Font Readability & Mobile Text Scaling
+============================================ */
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+@media (max-width: 640px) {
+  /* Prevent tiny uppercase monospace text from straining eyes on mobile */
+  .topbar__nav a {
+    font-size: 0.8rem;
+    letter-spacing: 0.04em;
+  }
+
+  .eyebrow {
+    font-size: 0.78rem;
+    letter-spacing: 0.08em;
+  }
+
+  .field dt {
+    font-size: 0.75rem;
+    letter-spacing: 0.06em;
+  }
+
+  .entry__head {
+    font-size: 0.76rem;
+  }
+
+  .entry__tags li {
+    font-size: 0.75rem;
+  }
+
+  .datapage__photo-caption {
+    font-size: 0.65rem;
+    letter-spacing: 0.12em;
+  }
+
+  .footer__inner {
+    font-size: 0.82rem;
+  }
+}
+
+
 
