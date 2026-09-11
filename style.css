@@ -237,7 +237,7 @@ img { max-width: 100%; display: block; }
 
 .eyebrow {
   font-family: var(--font-mono);
-  font-size: 0.74rem;
+  font-size: 0.875rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--navy);
@@ -319,7 +319,7 @@ button:focus-visible {
   justify-content: center;
   gap: 8px;
   font-family: var(--font-mono);
-  font-size: 0.85rem;
+  font-size: 0.875rem;
   letter-spacing: 0.03em;
   text-decoration: none;
   padding: 13px 22px;
@@ -414,7 +414,7 @@ button:focus-visible {
 ============================================ */
 .datapage {
   display: grid;
-  grid-template-columns: 120px 1fr;
+  grid-template-columns: 120px minmax(0, 1fr);
   gap: 28px;
   align-items: start;
   padding: 28px;
@@ -487,7 +487,7 @@ button:focus-visible {
 
 .datapage__fields {
   display: grid;
-  grid-template-columns: repeat(2, minmax(140px, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 16px 24px;
   margin: 0;
 }
@@ -498,7 +498,7 @@ button:focus-visible {
 
 .field dt {
   font-family: var(--font-mono);
-  font-size: 0.68rem;
+  font-size: 0.875rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--ink-soft);
@@ -526,7 +526,7 @@ button:focus-visible {
 .visa-group:last-child { margin-bottom: 0; }
 .visa-group__title {
   font-family: var(--font-mono);
-  font-size: 0.8rem;
+  font-size: 0.875rem;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--ink-soft);
@@ -544,7 +544,7 @@ button:focus-visible {
 
 .visa {
   font-family: var(--font-mono);
-  font-size: 0.86rem;
+  font-size: 0.875rem;
   padding: 9px 16px;
   border: 1px solid var(--line-strong);
   border-radius: 999px;
@@ -590,7 +590,7 @@ button:focus-visible {
   display: flex;
   justify-content: space-between;
   font-family: var(--font-mono);
-  font-size: 0.7rem;
+  font-size: 0.875rem;
   letter-spacing: 0.06em;
   color: var(--ink-soft);
   margin-bottom: 14px;
@@ -631,7 +631,7 @@ button:focus-visible {
 }
 .entry__tags li {
   font-family: var(--font-mono);
-  font-size: 0.68rem;
+  font-size: 0.875rem;
   letter-spacing: 0.03em;
   padding: 4px 9px;
   border: 1px solid var(--line);
@@ -645,7 +645,7 @@ button:focus-visible {
 }
 .entry__link {
   font-family: var(--font-mono);
-  font-size: 0.8rem;
+  font-size: 0.875rem;
   text-decoration: none;
   color: var(--navy);
   border-bottom: 1px solid transparent;
@@ -677,12 +677,13 @@ button:focus-visible {
   gap: 8px 16px;
   justify-content: space-between;
   font-family: var(--font-mono);
-  font-size: 0.78rem;
+  font-size: 0.875rem;
   color: var(--ink-soft);
 }
 
 /* Keep keyboard navigation visible above the sticky header. */
 .skip-link {
+  visibility: hidden;
   position: fixed;
   top: 12px;
   left: 12px;
@@ -691,7 +692,7 @@ button:focus-visible {
   background: var(--paper);
   color: var(--ink);
   font-family: var(--font-mono);
-  font-size: 0.85rem;
+  font-size: 0.875rem;
   font-weight: 500;
   text-decoration: none;
   border: 1px solid var(--line-strong);
@@ -700,7 +701,7 @@ button:focus-visible {
   transform: translateY(-200%);
   transition: transform 0.15s ease;
 }
-.skip-link:focus { transform: translateY(0); }
+.skip-link:focus { visibility: visible; transform: translateY(0); }
 
 @media (max-width: 560px) {
   html {
@@ -783,4 +784,42 @@ button:focus-visible {
 @media (max-height: 500px) {
   html { scroll-padding-top: 16px; }
   .topbar { position: static; }
+}
+
+.achievement { margin: 0; min-width: 0; text-align: center; }
+.achievement .stamp { margin-inline: auto; }
+.achievement figcaption {
+  max-width: 20ch;
+  margin: 14px auto 0;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: var(--ink-soft);
+}
+.field, .entry, .cover__main { min-width: 0; }
+.field dd, .btn { overflow-wrap: anywhere; }
+.btn { min-height: 44px; max-width: 100%; }
+@media (max-width: 900px) {
+  .page, .cover { padding-block: 40px; }
+  .cover__grid { grid-template-columns: minmax(0, 1fr); }
+  .cover__stamp { order: 0; justify-content: center; }
+  .cover__stamp .stamp--large { width: 120px; height: 120px; }
+  .stampboard {
+    grid-template-columns: repeat(auto-fit, minmax(128px, 1fr));
+    gap: 28px 16px;
+  }
+  .achievement .stamp { width: 116px; height: 116px; }
+}
+@media (max-width: 560px) {
+  .datapage { gap: 24px; }
+  .datapage__photo { justify-self: center; }
+  .datapage__fields { grid-template-columns: minmax(0, 1fr); }
+  .cover__actions .btn { width: 100%; text-align: center; }
+}
+@media (max-height: 500px) {
+  .cover__stamp { display: none; }
+  .page, .cover { padding-block: 28px; }
+}
+
+@media (min-width: 561px) and (max-width: 900px) {
+  .stampboard { grid-template-columns: repeat(3, minmax(128px, 1fr)); }
 }
