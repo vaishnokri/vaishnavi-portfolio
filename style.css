@@ -403,16 +403,59 @@ button:focus-visible {
 }
 
 .datapage__photo {
-  width: 100px;
-  height: 120px;
-  background: var(--ink);
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  width: 120px;
+  height: 156px;
+  border: 5px solid var(--paper);
+  outline: 1px solid var(--line-strong);
+  background: linear-gradient(145deg, var(--navy) 20%, var(--green));
   color: var(--paper);
   display: grid;
   place-items: center;
-  font-family: var(--font-mono);
-  font-weight: 700;
-  font-size: 1.4rem;
   border-radius: 2px;
+}
+
+/* Fine security lines and an oval echo printed passport portraits. */
+.datapage__photo::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: repeating-linear-gradient(115deg, transparent 0 5px, var(--paper) 5px 6px);
+  opacity: 0.1;
+}
+.datapage__photo::after {
+  content: "";
+  position: absolute;
+  inset: 13px 10px 32px;
+  z-index: -1;
+  border: 1px solid currentColor;
+  border-radius: 50% 50% 42% 42%;
+  opacity: 0.4;
+}
+.datapage__monogram {
+  margin-top: -16px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 2.8rem;
+  line-height: 1;
+  letter-spacing: -0.08em;
+  padding-right: 0.08em;
+}
+.datapage__photo-caption {
+  position: absolute;
+  inset: auto 0 0;
+  padding: 5px 8px;
+  border-top: 3px solid var(--gold);
+  background: var(--paper);
+  color: var(--navy);
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-align: center;
 }
 
 .datapage__fields {
