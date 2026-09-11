@@ -1,0 +1,722 @@
+[
+  {
+    "name": "light-320-portrait",
+    "viewport": {
+      "width": 320,
+      "height": 780
+    },
+    "overflow": false,
+    "smallTargets": [],
+    "smallText": [],
+    "header": {
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 166,
+      "right": 320,
+      "bottom": 166
+    },
+    "stampClipping": false,
+    "stampOverlap": false
+  },
+  {
+    "name": "light-320-short",
+    "viewport": {
+      "width": 320,
+      "height": 400
+    },
+    "overflow": false,
+    "smallTargets": [],
+    "smallText": [],
+    "header": {
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 166,
+      "right": 320,
+      "bottom": 166
+    },
+    "stampClipping": false,
+    "stampOverlap": false
+  },
+  {
+    "name": "light-320-landscape",
+    "viewport": {
+      "width": 780,
+      "height": 320
+    },
+    "overflow": false,
+    "smallTargets": [],
+    "smallText": [],
+    "header": {
+      "x": 0,
+      "y": 0,
+      "w": 780,
+      "h": 118,
+      "right": 780,
+      "bottom": 118
+    },
+    "stampClipping": false,
+    "stampOverlap": false
+  },
+  {
+    "name": "light-360-portrait",
+    "viewport": {
+      "width": 360,
+      "height": 780
+    },
+    "overflow": false,
+    "smallTargets": [],
+    "smallText": [],
+    "header": {
+      "x": 0,
+      "y": 0,
+      "w": 360,
+      "h": 166,
+      "right": 360,
+      "bottom": 166
+    },
+    "stampClipping": false,
+    "stampOverlap": false
+  },
+  {
+    "name": "light-360-short",
+    "viewport": {
+      "width": 360,
+      "height": 400
+    },
+    "overflow": false,
+    "smallTargets": [],
+    "smallText": [],
+    "header": {
+      "x": 0,
+      "y": 0,
+      "w": 360,
+      "h": 166,
+      "right": 360,
+      "bottom": 166
+    },
+    "stampClipping": false,
+    "stampOverlap": false
+  },
+  {
+    "name": "light-360-landscape",
+    "viewport": {
+      "width": 780,
+      "height": 360
+    },
+    "overflow": false,
+    "smallTargets": [],
+    "smallText": [],
+    "header": {
+      "x": 0,
+      "y": 0,
+      "w": 780,
+      "h": 118,
+      "right": 780,
+      "bottom": 118
+    },
+    "stampClipping": false,
+    "stampOverlap": false
+  },
+  {
+    "name": "light-375-portrait",
+    "viewport": {
+      "width": 375,
+      "height": 780
+    },
+    "overflow": false,
+    "smallTargets": [],
+    "smallText": [],
+    "header": {
+      "x": 0,
+      "y": 0,
+      "w": 375,
+      "h": 166,
+      "right": 375,
+      "bottom": 166
+    },
+    "stampClipping": false,
+    "stampOverlap": false
+  },
+  {
+    "name": "light-375-short",
+    "viewport": {
+      "width": 375,
+      "height": 400
+    },
+    "overflow": false,
+    "smallTargets": [],
+    "smallText": [],
+    "header": {
+      "x": 0,
+      "y": 0,
+      "w": 375,
+      "h": 166,
+      "right": 375,
+      "bottom": 166
+    },
+    "stampClipping": false,
+    "stampOverlap": false
+  },
+  {
+    "name": "light-375-landscape",
+    "viewport": {
+      "width": 780,
+      "height": 375
+    },
+    "overflow": false,
+    "smallTargets": [],
+    "smallText": [],
+    "header": {
+      "x": 0,
+      "y": 0,
+      "w": 780,
+      "h": 118,
+      "right": 780,
+      "bottom": 118
+    },
+    "stampClipping": false,
+    "stampOverlap": false
+  },
+  {
+    "name": "light-390-portrait",
+    "viewport": {
+      "width": 390,
+      "height": 780
+    },
+    "overflow": false,
+    "smallTargets": [],
+    "smallText": [],
+    "header": {
+      "x": 0,
+      "y": 0,
+      "w": 390,
+      "h": 166,
+      "right": 390,
+      "bottom": 166
+    },
+    "stampClipping": false,
+    "stampOverlap": false
+  },
+  {
+    "name": "light-390-short",
+    "viewport": {
+      "width": 390,
+      "height": 400
+    },
+    "overflow": false,
+    "smallTargets": [],
+    "smallText": [],
+    "header": {
+      "x": 0,
+      "y": 0,
+      "w": 390,
+      "h": 166,
+      "right": 390,
+      "bottom": 166
+    },
+    "stampClipping": false,
+    "stampOverlap": false
+  },
+  {
+    "name": "light-390-landscape",
+    "viewport": {
+      "width": 780,
+      "height": 390
+    },
+    "overflow": false,
+    "smallTargets": [],
+    "smallText": [],
+    "header": {
+      "x": 0,
+      "y": 0,
+      "w": 780,
+      "h": 118,
+      "right": 780,
+      "bottom": 118
+    },
+    "stampClipping": false,
+    "stampOverlap": false
+  },
+  {
+    "name": "light-412-portrait",
+    "viewport": {
+      "width": 412,
+      "height": 780
+    },
+    "overflow": false,
+    "smallTargets": [],
+    "smallText": [],
+    "header": {
+      "x": 0,
+      "y": 0,
+      "w": 412,
+      "h": 166,
+      "right": 412,
+      "bottom": 166
+    },
+    "stampClipping": false,
+    "stampOverlap": false
+  },
+  {
+    "name": "light-412-short",
+    "viewport": {
+      "width": 412,
+      "height": 400
+    },
+    "overflow": false,
+    "smallTargets": [],
+    "smallText": [],
+    "header": {
+      "x": 0,
+      "y": 0,
+      "w": 412,
+      "h": 166,
+      "right": 412,
+      "bottom": 166
+    },
+    "stampClipping": false,
+    "stampOverlap": false
+  },
+  {
+    "name": "light-412-landscape",
+    "viewport": {
+      "width": 780,
+      "height": 412
+    },
+    "overflow": false,
+    "smallTargets": [],
+    "smallText": [],
+    "header": {
+      "x": 0,
+      "y": 0,
+      "w": 780,
+      "h": 118,
+      "right": 780,
+      "bottom": 118
+    },
+    "stampClipping": false,
+    "stampOverlap": false
+  },
+  {
+    "name": "light-430-portrait",
+    "viewport": {
+      "width": 430,
+      "height": 780
+    },
+    "overflow": false,
+    "smallTargets": [],
+    "smallText": [],
+    "header": {
+      "x": 0,
+      "y": 0,
+      "w": 430,
+      "h": 166,
+      "right": 430,
+      "bottom": 166
+    },
+    "stampClipping": false,
+    "stampOverlap": false
+  },
+  {
+    "name": "light-430-short",
+    "viewport": {
+      "width": 430,
+      "height": 400
+    },
+    "overflow": false,
+    "smallTargets": [],
+    "smallText": [],
+    "header": {
+      "x": 0,
+      "y": 0,
+      "w": 430,
+      "h": 166,
+      "right": 430,
+      "bottom": 166
+    },
+    "stampClipping": false,
+    "stampOverlap": false
+  },
+  {
+    "name": "light-430-landscape",
+    "viewport": {
+      "width": 780,
+      "height": 430
+    },
+    "overflow": false,
+    "smallTargets": [],
+    "smallText": [],
+    "header": {
+      "x": 0,
+      "y": 0,
+      "w": 780,
+      "h": 118,
+      "right": 780,
+      "bottom": 118
+    },
+    "stampClipping": false,
+    "stampOverlap": false
+  },
+  {
+    "name": "dark-320-portrait",
+    "viewport": {
+      "width": 320,
+      "height": 780
+    },
+    "overflow": false,
+    "smallTargets": [],
+    "smallText": [],
+    "header": {
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 166,
+      "right": 320,
+      "bottom": 166
+    },
+    "stampClipping": false,
+    "stampOverlap": false
+  },
+  {
+    "name": "dark-320-short",
+    "viewport": {
+      "width": 320,
+      "height": 400
+    },
+    "overflow": false,
+    "smallTargets": [],
+    "smallText": [],
+    "header": {
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 166,
+      "right": 320,
+      "bottom": 166
+    },
+    "stampClipping": false,
+    "stampOverlap": false
+  },
+  {
+    "name": "dark-320-landscape",
+    "viewport": {
+      "width": 780,
+      "height": 320
+    },
+    "overflow": false,
+    "smallTargets": [],
+    "smallText": [],
+    "header": {
+      "x": 0,
+      "y": 0,
+      "w": 780,
+      "h": 118,
+      "right": 780,
+      "bottom": 118
+    },
+    "stampClipping": false,
+    "stampOverlap": false
+  },
+  {
+    "name": "dark-360-portrait",
+    "viewport": {
+      "width": 360,
+      "height": 780
+    },
+    "overflow": false,
+    "smallTargets": [],
+    "smallText": [],
+    "header": {
+      "x": 0,
+      "y": 0,
+      "w": 360,
+      "h": 166,
+      "right": 360,
+      "bottom": 166
+    },
+    "stampClipping": false,
+    "stampOverlap": false
+  },
+  {
+    "name": "dark-360-short",
+    "viewport": {
+      "width": 360,
+      "height": 400
+    },
+    "overflow": false,
+    "smallTargets": [],
+    "smallText": [],
+    "header": {
+      "x": 0,
+      "y": 0,
+      "w": 360,
+      "h": 166,
+      "right": 360,
+      "bottom": 166
+    },
+    "stampClipping": false,
+    "stampOverlap": false
+  },
+  {
+    "name": "dark-360-landscape",
+    "viewport": {
+      "width": 780,
+      "height": 360
+    },
+    "overflow": false,
+    "smallTargets": [],
+    "smallText": [],
+    "header": {
+      "x": 0,
+      "y": 0,
+      "w": 780,
+      "h": 118,
+      "right": 780,
+      "bottom": 118
+    },
+    "stampClipping": false,
+    "stampOverlap": false
+  },
+  {
+    "name": "dark-375-portrait",
+    "viewport": {
+      "width": 375,
+      "height": 780
+    },
+    "overflow": false,
+    "smallTargets": [],
+    "smallText": [],
+    "header": {
+      "x": 0,
+      "y": 0,
+      "w": 375,
+      "h": 166,
+      "right": 375,
+      "bottom": 166
+    },
+    "stampClipping": false,
+    "stampOverlap": false
+  },
+  {
+    "name": "dark-375-short",
+    "viewport": {
+      "width": 375,
+      "height": 400
+    },
+    "overflow": false,
+    "smallTargets": [],
+    "smallText": [],
+    "header": {
+      "x": 0,
+      "y": 0,
+      "w": 375,
+      "h": 166,
+      "right": 375,
+      "bottom": 166
+    },
+    "stampClipping": false,
+    "stampOverlap": false
+  },
+  {
+    "name": "dark-375-landscape",
+    "viewport": {
+      "width": 780,
+      "height": 375
+    },
+    "overflow": false,
+    "smallTargets": [],
+    "smallText": [],
+    "header": {
+      "x": 0,
+      "y": 0,
+      "w": 780,
+      "h": 118,
+      "right": 780,
+      "bottom": 118
+    },
+    "stampClipping": false,
+    "stampOverlap": false
+  },
+  {
+    "name": "dark-390-portrait",
+    "viewport": {
+      "width": 390,
+      "height": 780
+    },
+    "overflow": false,
+    "smallTargets": [],
+    "smallText": [],
+    "header": {
+      "x": 0,
+      "y": 0,
+      "w": 390,
+      "h": 166,
+      "right": 390,
+      "bottom": 166
+    },
+    "stampClipping": false,
+    "stampOverlap": false
+  },
+  {
+    "name": "dark-390-short",
+    "viewport": {
+      "width": 390,
+      "height": 400
+    },
+    "overflow": false,
+    "smallTargets": [],
+    "smallText": [],
+    "header": {
+      "x": 0,
+      "y": 0,
+      "w": 390,
+      "h": 166,
+      "right": 390,
+      "bottom": 166
+    },
+    "stampClipping": false,
+    "stampOverlap": false
+  },
+  {
+    "name": "dark-390-landscape",
+    "viewport": {
+      "width": 780,
+      "height": 390
+    },
+    "overflow": false,
+    "smallTargets": [],
+    "smallText": [],
+    "header": {
+      "x": 0,
+      "y": 0,
+      "w": 780,
+      "h": 118,
+      "right": 780,
+      "bottom": 118
+    },
+    "stampClipping": false,
+    "stampOverlap": false
+  },
+  {
+    "name": "dark-412-portrait",
+    "viewport": {
+      "width": 412,
+      "height": 780
+    },
+    "overflow": false,
+    "smallTargets": [],
+    "smallText": [],
+    "header": {
+      "x": 0,
+      "y": 0,
+      "w": 412,
+      "h": 166,
+      "right": 412,
+      "bottom": 166
+    },
+    "stampClipping": false,
+    "stampOverlap": false
+  },
+  {
+    "name": "dark-412-short",
+    "viewport": {
+      "width": 412,
+      "height": 400
+    },
+    "overflow": false,
+    "smallTargets": [],
+    "smallText": [],
+    "header": {
+      "x": 0,
+      "y": 0,
+      "w": 412,
+      "h": 166,
+      "right": 412,
+      "bottom": 166
+    },
+    "stampClipping": false,
+    "stampOverlap": false
+  },
+  {
+    "name": "dark-412-landscape",
+    "viewport": {
+      "width": 780,
+      "height": 412
+    },
+    "overflow": false,
+    "smallTargets": [],
+    "smallText": [],
+    "header": {
+      "x": 0,
+      "y": 0,
+      "w": 780,
+      "h": 118,
+      "right": 780,
+      "bottom": 118
+    },
+    "stampClipping": false,
+    "stampOverlap": false
+  },
+  {
+    "name": "dark-430-portrait",
+    "viewport": {
+      "width": 430,
+      "height": 780
+    },
+    "overflow": false,
+    "smallTargets": [],
+    "smallText": [],
+    "header": {
+      "x": 0,
+      "y": 0,
+      "w": 430,
+      "h": 166,
+      "right": 430,
+      "bottom": 166
+    },
+    "stampClipping": false,
+    "stampOverlap": false
+  },
+  {
+    "name": "dark-430-short",
+    "viewport": {
+      "width": 430,
+      "height": 400
+    },
+    "overflow": false,
+    "smallTargets": [],
+    "smallText": [],
+    "header": {
+      "x": 0,
+      "y": 0,
+      "w": 430,
+      "h": 166,
+      "right": 430,
+      "bottom": 166
+    },
+    "stampClipping": false,
+    "stampOverlap": false
+  },
+  {
+    "name": "dark-430-landscape",
+    "viewport": {
+      "width": 780,
+      "height": 430
+    },
+    "overflow": false,
+    "smallTargets": [],
+    "smallText": [],
+    "header": {
+      "x": 0,
+      "y": 0,
+      "w": 780,
+      "h": 118,
+      "right": 780,
+      "bottom": 118
+    },
+    "stampClipping": false,
+    "stampOverlap": false
+  }
+]
