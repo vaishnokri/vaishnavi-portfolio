@@ -779,3 +779,74 @@ button:focus-visible {
   }
 }
 
+/* ============================================
+   Touch Ergonomics & Tap Target Sizes (Mobile & Touch Devices)
+============================================ */
+@media (pointer: coarse), (max-width: 768px) {
+  /* Prevent tap delay and mobile browser gray rectangle flash */
+  a,
+  button,
+  .btn,
+  .theme-toggle,
+  .topbar__mark,
+  .topbar__nav a {
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  /* Theme toggle: 44px minimum hit target for easy tapping */
+  .theme-toggle {
+    width: 44px;
+    height: 44px;
+    flex-shrink: 0;
+  }
+  .theme-toggle__icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  /* Topbar brand mark: 44px minimum hit target */
+  .topbar__mark {
+    min-height: 44px;
+    min-width: 44px;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  /* Navigation links: generous tap targets and spacing to prevent misfiring */
+  .topbar__nav {
+    gap: 8px 12px;
+  }
+
+  .topbar__nav a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    padding: 8px 12px;
+    border-radius: 4px;
+  }
+
+  /* Buttons: meet 48px standard touch target */
+  .btn {
+    min-height: 48px;
+    padding-inline: 20px;
+  }
+
+  /* Project links: easy to tap */
+  .entry__link {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    padding-block: 6px;
+  }
+
+  /* Visa items: comfortable touch target */
+  .visa {
+    min-height: 40px;
+    display: inline-flex;
+    align-items: center;
+  }
+}
+
+
