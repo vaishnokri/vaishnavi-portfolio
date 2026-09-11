@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vaishnavi Kumari — Developer Passport</title>
+<meta name="description" content="Portfolio of Vaishnavi Kumari, frontend developer.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="grain"></div>
+
+<header class="topbar">
+  <div class="wrap topbar__inner">
+    <a href="#cover" class="topbar__mark">VK<span class="topbar__mark-dot">·</span></a>
+    <nav class="topbar__nav" aria-label="Primary">
+      <a href="#about">Profile</a>
+      <a href="#skills">Visas</a>
+      <a href="#projects">Entries</a>
+      <a href="#achievements">Stamps</a>
+      <a href="#contact">Exit</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <!-- COVER PAGE -->
+  <section id="cover" class="page cover">
+    <div class="wrap cover__grid">
+      <div class="cover__main">
+        <p class="eyebrow">PASSPORT · DEVELOPER · NO. VK‑2026</p>
+        <h1 class="cover__name">Vaishnavi<br>Kumari</h1>
+        <p class="cover__role">Frontend Developer — builds interfaces that hold up under real use</p>
+        <div class="cover__actions">
+          <a href="#projects" class="btn btn--primary">View entries</a>
+          <a href="#contact" class="btn btn--ghost">Request contact</a>
+        </div>
+      </div>
+      <div class="cover__stamp" aria-hidden="true">
+        <div class="stamp stamp--navy stamp--large">
+          <svg viewBox="0 0 120 120" class="stamp__ring">
+            <path id="stampCirclePath" d="M 60,60 m -46,0 a 46,46 0 1,1 92,0 a 46,46 0 1,1 -92,0" fill="none"/>
+            <text><textPath href="#stampCirclePath" startOffset="0%">ISSUED · SEPTEMBER 2026 · OPEN TO WORK · </textPath></text>
+          </svg>
+          <span class="stamp__center">OK</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROFILE / DATA PAGE -->
+  <section id="about" class="page">
+    <div class="wrap">
+      <p class="eyebrow">PAGE 01 — PROFILE</p>
+      <h2 class="page__title">Data page</h2>
+      <div class="datapage">
+        <div class="datapage__photo" aria-hidden="true">
+          <span>VK</span>
+        </div>
+        <dl class="datapage__fields">
+          <div class="field"><dt>Surname</dt><dd>Kumari</dd></div>
+          <div class="field"><dt>Given name</dt><dd>Vaishnavi</dd></div>
+          <div class="field"><dt>Occupation</dt><dd>Frontend Developer</dd></div>
+          <div class="field"><dt>Based in</dt><dd>India</dd></div>
+          <div class="field"><dt>Focus</dt><dd>HTML · CSS · JavaScript · React</dd></div>
+          <div class="field"><dt>Status</dt><dd class="field--status">Open to opportunities</dd></div>
+        </dl>
+      </div>
+      <p class="about__bio">I like building things that feel considered — pages where the spacing, motion, and copy all agree with each other. This portfolio is itself the first stamp in that direction: everything here is hand-built, no template.</p>
+    </div>
+  </section>
+
+  <!-- SKILLS / VISA PAGE -->
+  <section id="skills" class="page page--alt">
+    <div class="wrap">
+      <p class="eyebrow">PAGE 02 — VISAS</p>
+      <h2 class="page__title">Cleared for entry</h2>
+      <p class="page__lede">Each visa below marks a stack this passport has been stamped through.</p>
+
+      <div class="visa-group">
+        <h3 class="visa-group__title">Languages</h3>
+        <ul class="visa-list">
+          <li class="visa">HTML5</li>
+          <li class="visa">CSS3</li>
+          <li class="visa">JavaScript (ES6+)</li>
+        </ul>
+      </div>
+      <div class="visa-group">
+        <h3 class="visa-group__title">Frameworks &amp; libraries</h3>
+        <ul class="visa-list">
+          <li class="visa">React</li>
+          <li class="visa">Tailwind CSS</li>
+          <li class="visa">Sass</li>
+        </ul>
+      </div>
+      <div class="visa-group">
+        <h3 class="visa-group__title">Tooling</h3>
+        <ul class="visa-list">
+          <li class="visa">Git &amp; GitHub</li>
+          <li class="visa">Figma</li>
+          <li class="visa">Vite</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS / ENTRY STAMPS -->
+  <section id="projects" class="page">
+    <div class="wrap">
+      <p class="eyebrow">PAGE 03 — ENTRIES</p>
+      <h2 class="page__title">Recorded entries</h2>
+      <p class="page__lede">A working log of things built. Swap these for your real projects.</p>
+
+      <div class="entries">
+        <article class="entry">
+          <div class="entry__head">
+            <span class="entry__index">ENTRY 001</span>
+            <span class="entry__date">2026</span>
+          </div>
+          <h3 class="entry__title">Recipe Finder</h3>
+          <p class="entry__desc">Search and save recipes by ingredient, with a filterable grid and local-storage favorites.</p>
+          <ul class="entry__tags">
+            <li>HTML</li><li>CSS</li><li>JavaScript</li>
+          </ul>
+          <div class="entry__links">
+            <a href="#" class="entry__link">Live ↗</a>
+            <a href="#" class="entry__link">Code ↗</a>
+          </div>
+        </article>
+
+        <article class="entry">
+          <div class="entry__head">
+            <span class="entry__index">ENTRY 002</span>
+            <span class="entry__date">2026</span>
+          </div>
+          <h3 class="entry__title">Task Manager</h3>
+          <p class="entry__desc">Drag-and-drop task board with three states, keyboard accessible, persisted between sessions.</p>
+          <ul class="entry__tags">
+            <li>React</li><li>CSS</li>
+          </ul>
+          <div class="entry__links">
+            <a href="#" class="entry__link">Live ↗</a>
+            <a href="#" class="entry__link">Code ↗</a>
+          </div>
+        </article>
+
+        <article class="entry">
+          <div class="entry__head">
+            <span class="entry__index">ENTRY 003</span>
+            <span class="entry__date">2026</span>
+          </div>
+          <h3 class="entry__title">Weather Dashboard</h3>
+          <p class="entry__desc">Live weather lookup by city with a small forecast strip and graceful error states.</p>
+          <ul class="entry__tags">
+            <li>JavaScript</li><li>API</li>
+          </ul>
+          <div class="entry__links">
+            <a href="#" class="entry__link">Live ↗</a>
+            <a href="#" class="entry__link">Code ↗</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ACHIEVEMENTS / STAMP PAGE -->
+  <section id="achievements" class="page page--alt page--stamps">
+    <div class="wrap">
+      <p class="eyebrow">PAGE 04 — STAMPS</p>
+      <h2 class="page__title">Collected stamps</h2>
+      <p class="page__lede">Milestones, stamped in as they happen.</p>
+
+      <div class="stampboard">
+        <div class="stamp stamp--navy" style="--r:-6deg">
+          <svg viewBox="0 0 120 120" class="stamp__ring">
+            <path id="p1" d="M 60,60 m -46,0 a 46,46 0 1,1 92,0 a 46,46 0 1,1 -92,0" fill="none"/>
+            <text><textPath href="#p1" startOffset="0%">FIRST REPOSITORY · GITHUB · </textPath></text>
+          </svg>
+          <span class="stamp__center stamp__center--sm">2026</span>
+        </div>
+
+        <div class="stamp stamp--gold" style="--r:4deg">
+          <svg viewBox="0 0 120 120" class="stamp__ring">
+            <path id="p2" d="M 60,60 m -46,0 a 46,46 0 1,1 92,0 a 46,46 0 1,1 -92,0" fill="none"/>
+            <text><textPath href="#p2" startOffset="0%">OPEN SOURCE · FIRST PR MERGED · </textPath></text>
+          </svg>
+          <span class="stamp__center stamp__center--sm">PR</span>
+        </div>
+
+        <div class="stamp stamp--green" style="--r:-3deg">
+          <svg viewBox="0 0 120 120" class="stamp__ring">
+            <path id="p3" d="M 60,60 m -46,0 a 46,46 0 1,1 92,0 a 46,46 0 1,1 -92,0" fill="none"/>
+            <text><textPath href="#p3" startOffset="0%">100 DAYS OF CODE · STREAK · </textPath></text>
+          </svg>
+          <span class="stamp__center stamp__center--sm">100</span>
+        </div>
+
+        <div class="stamp stamp--navy" style="--r:5deg">
+          <svg viewBox="0 0 120 120" class="stamp__ring">
+            <path id="p4" d="M 60,60 m -46,0 a 46,46 0 1,1 92,0 a 46,46 0 1,1 -92,0" fill="none"/>
+            <text><textPath href="#p4" startOffset="0%">RESPONSIVE DESIGN · CERTIFIED · </textPath></text>
+          </svg>
+          <span class="stamp__center stamp__center--sm">✓</span>
+        </div>
+
+        <div class="stamp stamp--gold" style="--r:-5deg">
+          <svg viewBox="0 0 120 120" class="stamp__ring">
+            <path id="p5" d="M 60,60 m -46,0 a 46,46 0 1,1 92,0 a 46,46 0 1,1 -92,0" fill="none"/>
+            <text><textPath href="#p5" startOffset="0%">HACKATHON · PARTICIPANT · </textPath></text>
+          </svg>
+          <span class="stamp__center stamp__center--sm">HK</span>
+        </div>
+
+        <div class="stamp stamp--green" style="--r:3deg">
+          <svg viewBox="0 0 120 120" class="stamp__ring">
+            <path id="p6" d="M 60,60 m -46,0 a 46,46 0 1,1 92,0 a 46,46 0 1,1 -92,0" fill="none"/>
+            <text><textPath href="#p6" startOffset="0%">JAVASCRIPT · FUNDAMENTALS · </textPath></text>
+          </svg>
+          <span class="stamp__center stamp__center--sm">JS</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXIT / CONTACT -->
+  <section id="contact" class="page cover cover--exit">
+    <div class="wrap cover__grid">
+      <div class="cover__main">
+        <p class="eyebrow">EXIT STAMP</p>
+        <h2 class="cover__name cover__name--sm">Let's build<br>something.</h2>
+        <p class="cover__role">Open to frontend roles, freelance work, and collaborations.</p>
+        <div class="cover__actions">
+          <a href="mailto:vaishnavi.kumari@example.com" class="btn btn--primary">vaishnavi.kumari@example.com</a>
+          <a href="https://github.com/vaishnokri" class="btn btn--ghost" target="_blank" rel="noopener">GitHub ↗</a>
+        </div>
+      </div>
+      <div class="cover__stamp" aria-hidden="true">
+        <div class="stamp stamp--green stamp--large">
+          <svg viewBox="0 0 120 120" class="stamp__ring">
+            <path id="stampCirclePath2" d="M 60,60 m -46,0 a 46,46 0 1,1 92,0 a 46,46 0 1,1 -92,0" fill="none"/>
+            <text><textPath href="#stampCirclePath2" startOffset="0%">CLEARED FOR CONTACT · REPLY WITHIN 48H · </textPath></text>
+          </svg>
+          <span class="stamp__center">GO</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap footer__inner">
+    <span>© 2026 Vaishnavi Kumari</span>
+    <span class="footer__meta">Built by hand · HTML · CSS · JS</span>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
