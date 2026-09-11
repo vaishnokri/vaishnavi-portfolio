@@ -569,7 +569,7 @@ button:focus-visible {
 .stampboard {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(132px, 1fr));
-  gap: clamp(24px, 4vw, 48px);
+  gap: clamp(16px, 4vw, 48px);
   justify-items: center;
   padding-top: 8px;
 }
@@ -606,14 +606,53 @@ button:focus-visible {
 .skip-link:focus { transform: translateY(0); }
 
 @media (max-width: 560px) {
-  .topbar__inner {
-    height: auto;
-    min-height: 64px;
-    flex-wrap: wrap;
-    gap: 8px 16px;
-    padding-block: 12px;
+  html {
+    scroll-padding-top: 6rem;
   }
-  .topbar__controls { flex-wrap: wrap; gap: 8px 14px; }
-  .topbar__nav { flex-wrap: wrap; gap: 8px 16px; }
+  .wrap {
+    padding-inline: 16px;
+  }
+  .topbar__inner {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+    align-items: center;
+    height: auto;
+    min-height: 56px;
+    padding-block: 10px;
+    gap: 10px 0;
+  }
+  .topbar__mark {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .topbar__controls {
+    display: contents;
+  }
+  .theme-toggle {
+    grid-column: 2;
+    grid-row: 1;
+    justify-self: end;
+  }
+  .topbar__nav {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 14px;
+    padding-top: 8px;
+    border-top: 1px solid var(--line);
+  }
+  .topbar__nav a {
+    font-size: 0.74rem;
+    padding-block: 2px;
+  }
+  .datapage {
+    padding: 20px 16px;
+  }
+  .cover__stamp .stamp--large {
+    width: 150px;
+    height: 150px;
+  }
   .btn { max-width: 100%; overflow-wrap: anywhere; }
 }
