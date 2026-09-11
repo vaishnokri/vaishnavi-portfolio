@@ -778,6 +778,65 @@ button:focus-visible {
   .btn { max-width: 100%; overflow-wrap: anywhere; }
 }
 
+/* ============================================
+   Safe-area insets for notched & modern mobile devices
+============================================ */
+@supports (padding: env(safe-area-inset-top)) {
+  html {
+    scroll-padding-top: calc(6.5rem + env(safe-area-inset-top, 0px));
+  }
+
+  .topbar {
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-left: env(safe-area-inset-left, 0px);
+    padding-right: env(safe-area-inset-right, 0px);
+  }
+
+  .wrap {
+    padding-left: max(24px, calc(24px + env(safe-area-inset-left, 0px)));
+    padding-right: max(24px, calc(24px + env(safe-area-inset-right, 0px)));
+  }
+
+  @media (max-width: 560px) {
+    .wrap {
+      padding-left: max(16px, calc(16px + env(safe-area-inset-left, 0px)));
+      padding-right: max(16px, calc(16px + env(safe-area-inset-right, 0px)));
+    }
+  }
+
+  .footer {
+    padding-bottom: max(28px, calc(28px + env(safe-area-inset-bottom, 0px)));
+  }
+
+  .skip-link {
+    top: max(12px, calc(12px + env(safe-area-inset-top, 0px)));
+    left: max(12px, calc(12px + env(safe-area-inset-left, 0px)));
+  }
+}
+
+/* ============================================
+   Touch ergonomics: prevent tap delay/highlight flash.
+   (Tap-target sizing itself is already handled by the
+   min-width/min-height rules on these elements elsewhere
+   in this file, so it is not repeated here.)
+============================================ */
+@media (pointer: coarse), (max-width: 768px) {
+  a,
+  button,
+  .btn,
+  .theme-toggle,
+  .topbar__mark,
+  .topbar__nav a {
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
 /* Phone navigation has deliberate rows and never covers short viewports. */
 @media (max-width: 900px) {
   html { scroll-padding-top: 16px; }
