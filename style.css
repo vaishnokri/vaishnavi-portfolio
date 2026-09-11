@@ -124,7 +124,10 @@ img { max-width: 100%; display: block; }
   letter-spacing: 0.02em;
   text-decoration: none;
   color: var(--ink);
+  border-radius: 2px;
+  transition: color 0.15s ease;
 }
+.topbar__mark:hover { color: var(--navy); }
 .topbar__mark-dot { color: var(--navy); }
 
 .topbar__controls {
@@ -146,6 +149,7 @@ img { max-width: 100%; display: block; }
   text-decoration: none;
   color: var(--ink-soft);
   padding-block: 4px;
+  border-radius: 2px;
   border-bottom: 1px solid transparent;
   transition: color 0.15s ease, border-color 0.15s ease;
 }
@@ -174,7 +178,12 @@ img { max-width: 100%; display: block; }
 .theme-toggle:hover {
   color: var(--navy);
   border-color: var(--navy);
+  background: color-mix(in srgb, var(--navy) 8%, transparent);
   transform: translateY(-1px);
+}
+
+.theme-toggle:active {
+  transform: translateY(0) scale(0.95);
 }
 
 .theme-toggle:focus-visible {
@@ -296,6 +305,7 @@ button:focus-visible {
 .btn {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 8px;
   font-family: var(--font-mono);
   font-size: 0.85rem;
@@ -304,9 +314,10 @@ button:focus-visible {
   padding: 13px 22px;
   border-radius: var(--radius);
   border: 1px solid transparent;
-  transition: transform 0.15s ease, background 0.15s ease, border-color 0.15s ease;
+  transition: transform 0.15s ease, background 0.15s ease, border-color 0.15s ease, color 0.15s ease;
 }
 .btn:hover { transform: translateY(-1px); }
+.btn:active { transform: translateY(0); }
 
 .btn--primary {
   background: var(--ink);
@@ -322,7 +333,10 @@ button:focus-visible {
   border-color: var(--line-strong);
   color: var(--ink);
 }
-.btn--ghost:hover { border-color: var(--ink); }
+.btn--ghost:hover {
+  border-color: var(--navy);
+  color: var(--navy);
+}
 
 .cover__stamp { display: flex; justify-content: flex-end; }
 
@@ -340,7 +354,7 @@ button:focus-visible {
   border-radius: 50%;
   color: var(--ink-color);
   transform: rotate(var(--r, 0deg));
-  transition: transform 0.2s ease;
+  transition: transform 0.2s ease, color 0.2s ease, border-color 0.2s ease;
 }
 .stamp::before {
   content: "";
@@ -349,6 +363,7 @@ button:focus-visible {
   border: 1px solid var(--ink-color);
   border-radius: 50%;
   opacity: 0.6;
+  transition: border-color 0.2s ease;
 }
 .stamp:hover { transform: rotate(0deg) scale(1.04); }
 
@@ -395,6 +410,7 @@ button:focus-visible {
   background: var(--card-bg);
   border: 1px solid var(--line);
   border-radius: var(--radius);
+  margin-top: 28px;
   margin-bottom: 28px;
 }
 
@@ -488,12 +504,15 @@ button:focus-visible {
   max-width: 62ch;
   color: var(--ink-soft);
   font-size: 1.02rem;
+  line-height: 1.7;
+  margin: 0;
 }
 
 /* ============================================
    Skills / Visa list
 ============================================ */
 .visa-group { margin-bottom: 28px; }
+.visa-group:last-child { margin-bottom: 0; }
 .visa-group__title {
   font-family: var(--font-mono);
   font-size: 0.8rem;
@@ -519,6 +538,13 @@ button:focus-visible {
   border: 1px solid var(--line-strong);
   border-radius: 999px;
   background: var(--card-bg);
+  transition: border-color 0.15s ease, color 0.15s ease, transform 0.15s ease;
+  user-select: none;
+}
+.visa:hover {
+  border-color: var(--navy);
+  color: var(--navy);
+  transform: translateY(-1px);
 }
 
 /* ============================================
@@ -621,7 +647,7 @@ button:focus-visible {
 .stampboard {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(132px, 1fr));
-  gap: clamp(24px, 4vw, 48px);
+  gap: clamp(16px, 4vw, 48px);
   justify-items: center;
   padding-top: 8px;
 }
@@ -653,19 +679,66 @@ button:focus-visible {
   padding: 12px 20px;
   background: var(--paper);
   color: var(--ink);
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-decoration: none;
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   transform: translateY(-200%);
+  transition: transform 0.15s ease;
 }
 .skip-link:focus { transform: translateY(0); }
 
 @media (max-width: 560px) {
-  .topbar__inner {
-    height: auto;
-    min-height: 64px;
-    flex-wrap: wrap;
-    gap: 8px 16px;
-    padding-block: 12px;
+  html {
+    scroll-padding-top: 6rem;
   }
-  .topbar__controls { flex-wrap: wrap; gap: 8px 14px; }
-  .topbar__nav { flex-wrap: wrap; gap: 8px 16px; }
+  .wrap {
+    padding-inline: 16px;
+  }
+  .topbar__inner {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+    align-items: center;
+    height: auto;
+    min-height: 56px;
+    padding-block: 10px;
+    gap: 10px 0;
+  }
+  .topbar__mark {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .topbar__controls {
+    display: contents;
+  }
+  .theme-toggle {
+    grid-column: 2;
+    grid-row: 1;
+    justify-self: end;
+  }
+  .topbar__nav {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 14px;
+    padding-top: 8px;
+    border-top: 1px solid var(--line);
+  }
+  .topbar__nav a {
+    font-size: 0.74rem;
+    padding-block: 2px;
+  }
+  .datapage {
+    padding: 20px 16px;
+  }
+  .cover__stamp .stamp--large {
+    width: 150px;
+    height: 150px;
+  }
   .btn { max-width: 100%; overflow-wrap: anywhere; }
 }
