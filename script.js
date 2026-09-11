@@ -60,4 +60,62 @@
     );
     revealTargets.forEach((el) => revealObserver.observe(el));
   }
+
+  // Theme toggle with localStorage persistence and system preference fallback
+  const themeToggleBtn = document.getElementById("theme-toggle");
+
+  const getPreferredTheme = () => {
+    try {
+      const stored = localStorage.getItem("theme");
+      if (stored === "dark" || stored === "light") return stored;
+    } catch {
+      // Ignore localStorage access restrictions
+    }
+    return window.matchMedia("(prefers-color-scheme: dark)").matches
+      ? "dark"
+      : "light";
+  };
+
+  const applyTheme = (theme) => {
+    document.documentElement.setAttribute("data-theme", theme);
+    if (themeToggleBtn) {
+      const isDark = theme === "dark";
+      const nextTheme = isDark ? "light" : "dark";
+      themeToggleBtn.setAttribute("aria-label", `Switch to ${nextTheme} theme`);
+      themeToggleBtn.setAttribute("title", `Switch to ${nextTheme} theme`);
+      themeToggleBtn.setAttribute("aria-pressed", isDark ? "true" : "false");
+    }
+  };
+
+  // Initialize theme on load
+  applyTheme(getPreferredTheme());
+
+  if (themeToggleBtn) {
+    themeToggleBtn.addEventListener("click", () => {
+      const currentTheme =
+        document.documentElement.getAttribute("data-theme") === "dark"
+          ? "dark"
+          : "light";
+      const nextTheme = currentTheme === "dark" ? "light" : "dark";
+      try {
+        localStorage.setItem("theme", nextTheme);
+      } catch {
+        // Ignore localStorage access restrictions
+      }
+      applyTheme(nextTheme);
+    });
+  }
+
+  // Listen for system theme changes when no explicit preference is stored
+  window
+    .matchMedia("(prefers-color-scheme: dark)")
+    .addEventListener("change", (e) => {
+      try {
+        if (!localStorage.getItem("theme")) {
+          applyTheme(e.matches ? "dark" : "light");
+        }
+      } catch {
+        applyTheme(e.matches ? "dark" : "light");
+      }
+    });
 })();
