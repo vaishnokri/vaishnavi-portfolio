@@ -85,6 +85,9 @@
       themeToggleBtn.setAttribute("title", `Switch to ${nextTheme} theme`);
       themeToggleBtn.setAttribute("aria-pressed", isDark ? "true" : "false");
     }
+    const themeColorMetas = document.querySelectorAll('meta[name="theme-color"]');
+    const color = theme === "dark" ? "#11141A" : "#EDEFF3";
+    themeColorMetas.forEach((meta) => meta.setAttribute("content", color));
   };
 
   // Initialize theme on load
