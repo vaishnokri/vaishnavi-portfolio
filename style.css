@@ -5,6 +5,7 @@
 :root {
   --paper: #EDEFF3;
   --paper-alt: #E3E6ED;
+  --card-bg: color-mix(in srgb, var(--paper) 40%, #ffffff);
   --ink: #14171F;
   --ink-soft: #4A4F5C;
   --navy: #362F78;
@@ -20,6 +21,21 @@
 
   --wrap: 1080px;
   --radius: 4px;
+}
+
+[data-theme="dark"] {
+  --paper: #11141A;
+  --paper-alt: #171B24;
+  --card-bg: #1A1E28;
+  --ink: #EDEFF3;
+  --ink-soft: #9DA4B4;
+  --navy: #8B85FF;
+  --navy-soft: #AAA5FF;
+  --gold: #DFA84C;
+  --green: #48B87D;
+  --line: rgba(237, 239, 243, 0.12);
+  --line-strong: rgba(237, 239, 243, 0.24);
+  color-scheme: dark;
 }
 
 * { box-sizing: border-box; }
@@ -46,6 +62,7 @@ body {
   font-size: 16px;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 .wrap {
@@ -73,9 +90,16 @@ img { max-width: 100%; display: block; }
   mix-blend-mode: multiply;
 }
 
+[data-theme="dark"] .grain {
+  opacity: 0.25;
+  background-image:
+    radial-gradient(rgba(237, 239, 243, 0.05) 1px, transparent 1px);
+  mix-blend-mode: screen;
+}
+
 /* ============================================
    Topbar
-============================================ */
+=========================================== */
 .topbar {
   position: sticky;
   top: 0;
@@ -83,6 +107,7 @@ img { max-width: 100%; display: block; }
   background: color-mix(in srgb, var(--paper) 88%, transparent);
   backdrop-filter: blur(6px);
   border-bottom: 1px solid var(--line);
+  transition: background-color 0.2s ease, border-color 0.2s ease;
 }
 
 .topbar__inner {
@@ -101,6 +126,12 @@ img { max-width: 100%; display: block; }
   color: var(--ink);
 }
 .topbar__mark-dot { color: var(--navy); }
+
+.topbar__controls {
+  display: flex;
+  align-items: center;
+  gap: clamp(14px, 2.5vw, 24px);
+}
 
 .topbar__nav {
   display: flex;
@@ -123,6 +154,54 @@ img { max-width: 100%; display: block; }
 .topbar__nav a.is-active {
   color: var(--navy);
   border-bottom-color: var(--navy);
+}
+
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius);
+  background: transparent;
+  color: var(--ink-soft);
+  cursor: pointer;
+  transition: color 0.15s ease, border-color 0.15s ease, background-color 0.15s ease, transform 0.15s ease;
+}
+
+.theme-toggle:hover {
+  color: var(--navy);
+  border-color: var(--navy);
+  transform: translateY(-1px);
+}
+
+.theme-toggle:focus-visible {
+  outline: 2px solid var(--navy);
+  outline-offset: 2px;
+}
+
+.theme-toggle__icon {
+  width: 17px;
+  height: 17px;
+  display: block;
+}
+
+.theme-toggle__icon--sun {
+  display: none;
+}
+
+.theme-toggle__icon--moon {
+  display: block;
+}
+
+[data-theme="dark"] .theme-toggle__icon--sun {
+  display: block;
+}
+
+[data-theme="dark"] .theme-toggle__icon--moon {
+  display: none;
 }
 
 /* ============================================
@@ -233,7 +312,10 @@ button:focus-visible {
   background: var(--ink);
   color: var(--paper);
 }
-.btn--primary:hover { background: var(--navy); }
+.btn--primary:hover {
+  background: var(--navy);
+  color: var(--paper);
+}
 
 .btn--ghost {
   background: transparent;
@@ -310,7 +392,7 @@ button:focus-visible {
   gap: 28px;
   align-items: start;
   padding: 28px;
-  background: color-mix(in srgb, var(--paper) 40%, white);
+  background: var(--card-bg);
   border: 1px solid var(--line);
   border-radius: var(--radius);
   margin-bottom: 28px;
@@ -393,7 +475,7 @@ button:focus-visible {
   padding: 9px 16px;
   border: 1px solid var(--line-strong);
   border-radius: 999px;
-  background: color-mix(in srgb, var(--paper) 40%, white);
+  background: var(--card-bg);
 }
 
 /* ============================================
@@ -416,7 +498,7 @@ button:focus-visible {
   border: 1px solid var(--line);
   border-radius: var(--radius);
   padding: 22px;
-  background: color-mix(in srgb, var(--paper) 40%, white);
+  background: var(--card-bg);
   transition: border-color 0.15s ease, transform 0.15s ease;
 }
 .entry:hover {
@@ -527,6 +609,7 @@ button:focus-visible {
     gap: 8px 16px;
     padding-block: 12px;
   }
+  .topbar__controls { flex-wrap: wrap; gap: 8px 14px; }
   .topbar__nav { flex-wrap: wrap; gap: 8px 16px; }
   .btn { max-width: 100%; overflow-wrap: anywhere; }
 }
