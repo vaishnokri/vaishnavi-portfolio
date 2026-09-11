@@ -15,9 +15,9 @@
   --line: rgba(20, 23, 31, 0.14);
   --line-strong: rgba(20, 23, 31, 0.28);
 
-  --font-display: "Space Grotesk", system-ui, sans-serif;
-  --font-body: "Inter", system-ui, sans-serif;
-  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+  --font-display: system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-body: system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: ui-monospace, "SFMono-Regular", Consolas, "Liberation Mono", monospace;
 
   --wrap: 1080px;
   --radius: 4px;
@@ -683,7 +683,7 @@ button:focus-visible {
 
 /* Keep keyboard navigation visible above the sticky header. */
 .skip-link {
-  visibility: hidden;
+  clip-path: inset(50%);
   position: fixed;
   top: 12px;
   left: 12px;
@@ -701,7 +701,7 @@ button:focus-visible {
   transform: translateY(-200%);
   transition: transform 0.15s ease;
 }
-.skip-link:focus { visibility: visible; transform: translateY(0); }
+.skip-link:focus { clip-path: none; transform: translateY(0); }
 
 @media (max-width: 560px) {
   html {
